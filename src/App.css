@@ -13,8 +13,8 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
+.pages {
+  background-color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -36,3 +36,108 @@
     transform: rotate(360deg);
   }
 }
+
+button {
+  min-height: 42px;
+  min-width: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  position: relative;
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, right top, color-stop(-12.74%, rgba(115, 40, 171, .5)), color-stop(56.76%, rgba(125, 28, 197, .271)));
+  background: linear-gradient(90deg, rgba(115, 40, 171, .5) -12.74%, rgba(125, 28, 197, .271) 56.76%);
+  border: 2px solid #7328AB;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+button:before {
+  content: "";
+  width: 4px;
+  height: 28px;
+  background: #19173b;
+  border: 2px solid #7328AB;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  position: absolute;
+  border-top: 0;
+  border-left: 0;
+  border-bottom: 0;
+  bottom: -7px;
+  left: 4px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+button:after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  bottom: -2px;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #fffcf7;
+}
+
+.card {
+  --background: linear-gradient(to left, #7328AB 0%, #ea5358 100%);
+  width: 30%;
+  height: 350px;
+  padding: 5px;
+  border-radius: 1rem;
+  overflow: visible;
+  background: #7328AB;
+  background: var(--background);
+  position: relative;
+  z-index: 1;
+ }
+ 
+ .card::after {
+  position: absolute;
+  content: "";
+  top: 30px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  transform: scale(0.8);
+  filter: blur(25px);
+  background: #7328AB;
+  background: var(--background);
+  transition: opacity .5s;
+ }
+ 
+ .card-info {
+  --color: #181818;
+  background: var(--color);
+  color: #7328AB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: .7rem;
+ }
+ 
+ .card .title {
+  font-weight: bold;
+  letter-spacing: .1em;
+ }
+ 
+ /*Hover*/
+ .card:hover::after {
+  opacity: 0;
+ }
+ 
+ .card:hover .card-info {
+  color: #ea5358;
+  transition: color 1s;
+ }
