@@ -47,7 +47,7 @@ function Projects() {
   return (
     <div className="pages" style={{display:'flex', flexFlow:'row', width:'100%' }}>
             <ChevronLeftIcon sx={{fontSize:100}} onClick={()=>manageArrowClick(-1)}/>
-            <div className="card" style={{height:'500px', width:'83%', cursor:'pointer'}}>
+            <div className="card" style={{height:'500px', width:'80%', cursor:'pointer'}}>
             <a href={proj[currentPos].link} rel="noreferrer" target="_blank" style={{textDecoration:'none'}}>
                 <div className="card-info" style={{display:'flex', flexFlow:'row',width:'100%', justifyContent:'center'}}>
                     <div>
